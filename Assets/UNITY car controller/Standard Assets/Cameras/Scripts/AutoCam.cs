@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Cameras
     public class AutoCam : PivotBasedCameraRig
     {
         [SerializeField] private Transform volumeCamera;
+        [SerializeField] private Vector3 volumeCameraOffset;
         [SerializeField] private float m_MoveSpeed = 3; // How fast the rig will move to keep up with target's position
         [SerializeField] private float m_TurnSpeed = 1; // How fast the rig will turn to keep up with target's rotation
         [SerializeField] private float m_RollSpeed = 0.2f;// How fast the rig will roll (around Z axis) to match target's roll.
@@ -89,7 +90,7 @@ namespace UnityStandardAssets.Cameras
             transform.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime*m_MoveSpeed);
 
             // volume camera moves towards target position
-            volumeCamera.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime * m_MoveSpeed);
+            volumeCamera.position = Vector3.Lerp(volumeCameraOffset + transform.position, m_Target.position, deltaTime * m_MoveSpeed);
 
             // camera's rotation is split into two parts, which can have independend speed settings:
             // rotating towards the target's forward direction (which encompasses its 'yaw' and 'pitch')
