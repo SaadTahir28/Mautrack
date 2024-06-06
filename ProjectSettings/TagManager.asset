@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - partesypines
+  - desactivame_x
+  - boton_lados
+  - botones_T
+  - pines
+  - SP_PIN
+  - desactivame22w
+  - marlyn
+  - SpeedUPBump
+  - lastposition
+  - camara1
+  - CheckPoint
+  - NO_hide
+  - hideme00
+  - Plataform
+  - SteeringWheel
+  - Gas
+  - Brake
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - PlacementObject
+  - Placeable Surface
+  - Spawner Contact
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - XR Simulation
+  - PolySpatial
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: PolySpatial
+    uniqueID: 3832034613
+    locked: 0
+  - name: PolySpatialUI
+    uniqueID: 2660214765
+    locked: 0

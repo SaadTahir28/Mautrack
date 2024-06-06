@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7945168392540722564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8169477023852769748}
+  m_Layer: 0
+  m_Name: speed force dona C.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8169477023852769748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945168392540722564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2749554849132407910}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2423738058512796557
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8169477023852769748}
+    m_Modifications:
+    - target: {fileID: -9202480718457992438, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c08a0eb7da75f40a98bd6e3ec4a58e3e, type: 2}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6a5b6745c93b43f1969a20dbe250b77, type: 2}
+    - target: {fileID: -3467030984322707390, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 449b0da5a3fd94e55a1dca9d077fed6f, type: 2}
+    - target: {fileID: -2415481994666705057, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 449b0da5a3fd94e55a1dca9d077fed6f, type: 2}
+    - target: {fileID: 801412378480398430, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1feaac870ba14292bc4c6aae3fd2505, type: 2}
+    - target: {fileID: 919132149155446097, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Name
+      value: speed force dona
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_TagString
+      value: SpeedUPBump
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168026956322792551, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c08a0eb7da75f40a98bd6e3ec4a58e3e, type: 2}
+    - target: {fileID: 3673661094839540996, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663354730402421249, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+--- !u!4 &2749554849132407910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+  m_PrefabInstance: {fileID: 2423738058512796557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3270652633480509148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0ece239326c642848bce28ec05c7187, type: 3}
+  m_PrefabInstance: {fileID: 2423738058512796557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1366411925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270652633480509148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.95, y: 9.12, z: 0.49}
+  m_Center: {x: 0, y: 0, z: 0}
