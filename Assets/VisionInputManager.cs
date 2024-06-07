@@ -15,6 +15,7 @@ public class VisionInputManager : MonoBehaviour
     public float steeringSensitivity = 0.1f;
     public float returnSpeed  = 2f;
     public float maxRotationAngle = 45f;
+    public float resetThreshold = 1f;
 
     private bool isSteering = false;
     private bool isGas = false;
@@ -23,7 +24,7 @@ public class VisionInputManager : MonoBehaviour
     private GameObject selectedObject;
     private Vector2 lastTouchPosition;
     private bool isTouching;
-    public float currentRotation;
+    private float currentRotation;
     private Coroutine returnToCenterCoroutine;
 
     private void OnEnable()
@@ -176,7 +177,7 @@ public class VisionInputManager : MonoBehaviour
 
     private IEnumerator ReturnSteeringWheelToCenter()
     {
-        while (Mathf.Abs(currentRotation) > 0.1f)
+        while (Mathf.Abs(currentRotation) > resetThreshold)
         {
             float angle = returnSpeed * Time.deltaTime * Mathf.Sign(-currentRotation);
             currentRotation += angle;
