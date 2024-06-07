@@ -2728,8 +2728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33acc3b6f04fc124fa646203f42ed25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Dimensions: {x: 50, y: 50, z: 50}
-  m_IsUniformScale: 0
+  m_Dimensions: {x: 65, y: 65, z: 65}
+  m_IsUniformScale: 1
   m_OutputConfiguration: {fileID: 11400000, guid: cfca9d641da824459be5edd273fb810b, type: 2}
   m_CullingMask:
     serializedVersion: 2
@@ -7027,9 +7027,9 @@ Transform:
   m_GameObject: {fileID: 902879806}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 260596812}
   m_Father: {fileID: 1501561384}
@@ -8855,8 +8855,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0, z: -0, w: 0.8660254}
   m_LocalPosition: {x: -10, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 553531903}
   m_Father: {fileID: 1501561384}
@@ -11726,7 +11726,7 @@ Transform:
   m_GameObject: {fileID: 1501561383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 18.1, z: 63.8}
+  m_LocalPosition: {x: 0, y: 8.9, z: 54.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13640,7 +13640,7 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   volumeCamera: {fileID: 420571623}
-  volumeCameraOffset: {x: 0, y: 30, z: 10}
+  volumeCameraOffset: {x: 0, y: 40, z: 10}
   m_MoveSpeed: 12
   m_TurnSpeed: 9
   m_RollSpeed: 4
@@ -15707,9 +15707,9 @@ Transform:
   m_GameObject: {fileID: 2038650038}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1716416181}
   m_Father: {fileID: 1501561384}
@@ -16079,7 +16079,7 @@ MonoBehaviour:
   steeringSensitivity: 0.5
   returnSpeed: 100
   maxRotationAngle: 45
-  currentRotation: 0
+  resetThreshold: 1
 --- !u!4 &2118681931
 Transform:
   m_ObjectHideFlags: 0
