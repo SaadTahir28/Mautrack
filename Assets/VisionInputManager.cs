@@ -5,6 +5,7 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 using UnityEngine.InputSystem.LowLevel;
 using System;
+using System.Collections;
 
 public class VisionInputManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class VisionInputManager : MonoBehaviour
     public static event Action<float> OnGasPressed;
     public static event Action<float> OnBrakePressed;
     public float steeringSensitivity = 0.1f;
+    public float returnSpeed  = 2f;
+    public float maxRotationAngle = 45f;
 
     private bool isSteering = false;
     private bool isGas = false;
@@ -20,7 +23,8 @@ public class VisionInputManager : MonoBehaviour
     private GameObject selectedObject;
     private Vector2 lastTouchPosition;
     private bool isTouching;
-    private float currentRotation;
+    public float currentRotation;
+    private Coroutine returnToCenterCoroutine;
 
     private void OnEnable()
     {
@@ -50,6 +54,12 @@ public class VisionInputManager : MonoBehaviour
                 {
                     if (touchData.targetObject.CompareTag("SteeringWheel"))
                     {
+                        if (returnToCenterCoroutine != null)
+                        {
+                            StopCoroutine(returnToCenterCoroutine);
+                            returnToCenterCoroutine = null;
+                        }
+
                         selectedObject = touchData.targetObject;
                         lastTouchPosition = touchData.interactionPosition;
                         isTouching = true;
@@ -78,11 +88,11 @@ public class VisionInputManager : MonoBehaviour
                         float angleDelta = CalculateRotationAngle(lastTouchPosition, currentTouchPosition, selectedObject.transform.position);
                         var angle = angleDelta * steeringSensitivity;
                         currentRotation += angle;
-                        currentRotation = Mathf.Clamp(currentRotation, -90f, 90f);
-                        float normalizedValue = currentRotation / 90f;
+                        currentRotation = Mathf.Clamp(currentRotation, -maxRotationAngle, maxRotationAngle);
+                        float normalizedValue = currentRotation / maxRotationAngle;
 
                         OnSteeringWheelRotated?.Invoke(-normalizedValue);
-                        RotateSteeringWheel(angle);
+                        RotateSteeringWheel();
                         lastTouchPosition = currentTouchPosition;
 
                         //Vector2 currentTouchPosition = touchData.interactionPosition;
@@ -105,12 +115,9 @@ public class VisionInputManager : MonoBehaviour
                 {
                     if (touchData.targetObject.CompareTag("SteeringWheel"))
                     {
-                        //OnSteeringWheelRotated?.Invoke(0);
-                        //ResetSteeringWheel();
-                        //currentRotation = 0f;
                         isTouching = false;
-                        selectedObject = null;
                         isSteering = false;
+                        returnToCenterCoroutine = StartCoroutine(ReturnSteeringWheelToCenter());
                     }
                     else if (touchData.targetObject.CompareTag("Gas"))
                     {
@@ -157,11 +164,30 @@ public class VisionInputManager : MonoBehaviour
         }
     }
 
-    private void RotateSteeringWheel(float angle)
+    private void RotateSteeringWheel()
     {
         if (selectedObject != null)
         {
-            selectedObject.transform.Rotate(-Vector3.up, angle);
+            var oldRotation = selectedObject.transform.localEulerAngles;
+            oldRotation.y = -currentRotation;
+            selectedObject.transform.localEulerAngles = oldRotation;
         }
+    }
+
+    private IEnumerator ReturnSteeringWheelToCenter()
+    {
+        while (Mathf.Abs(currentRotation) > 0.1f)
+        {
+            float angle = returnSpeed * Time.deltaTime * Mathf.Sign(-currentRotation);
+            currentRotation += angle;
+            currentRotation = Mathf.Clamp(currentRotation, -maxRotationAngle, maxRotationAngle);
+            RotateSteeringWheel();
+            float normalizedValue = currentRotation / maxRotationAngle;
+            OnSteeringWheelRotated?.Invoke(-normalizedValue);
+            yield return null;
+        }
+        currentRotation = 0f;
+        OnSteeringWheelRotated?.Invoke(0);
+        selectedObject = null;
     }
 }
